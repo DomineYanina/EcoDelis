@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" th:href="@{/css/footer.css}">
+    <title>Inicio</title>
+</head>
+<body>
+<section class="contGrandeHome">
+    <div class="contVideo" id="contVideo">
+        <img src="../static/img/BannerFinal.jpg" alt="" class="video">
+    </div>
+    <div class="contBotones">
+        <button class="btnHome soyUsuario" onclick="window.location.href='HomeUsuarios.html'">Usuarios</button>
+        <button class="btnHome soyRestaurant" onclick="window.location.href='HomeRestaurantes.html'">Restaurants</button>
+    </div>
+    <!-- Incluye el footer -->
+    <div th:replace="footer :: footer"></div>
+</section>
+<script th:inline="javascript">
+    /* Agregar la clase 'show' después de que se haya cargado el DOM */
+    document.addEventListener('DOMContentLoaded', function() {
+        var contVideo = document.getElementById('contVideo');
+        contVideo.classList.add('show');
+    });
+</script>
+<!--<script src="./JavaScript/scriptChatbot.js"></script>-->
+<!--<script src="./JavaScript/acciones.js"></script>-->
+</body>
+</html>
