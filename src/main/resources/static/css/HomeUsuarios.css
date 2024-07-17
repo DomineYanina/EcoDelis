@@ -1,0 +1,232 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: lightgreen;
+    font-family: sans-serif;
+    width: 100%;
+    background-image: url("../img/a.jpg");
+}
+
+.bannerHome {
+    height: 125px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: small;
+    background-color: #FFF7C8FF;
+    color: #2a5324;
+    font-weight: bold;
+    align-items: center;
+}
+
+.contenedorTopRestaurants{
+    box-shadow: 0 0 100px rgba(0, 0, 0, 1);
+    width: 48%;
+    background-color: #FFF7C8FF;
+    height: 125px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 2s, height 2s, transform 2s;
+}
+
+#banner, #sectorRestaurantes {
+    transition: height 2s;
+}
+
+.tit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloBanner{
+    color: #2a5324;
+    font-size: xx-large;
+    text-decoration: underline;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.puntero{
+    width: 50px;
+    height: 50px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.itemCarrouselComidas {
+    align-items: center;
+    border-width: 2px;
+    background-color: white;
+    margin-left: 1%;
+    margin-top: 1%;
+    height: 200px;
+    width: 180px;
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 0 100px rgba(189, 178, 120, 100);
+}
+
+.itemCarrouselComidas:hover {
+    transform: scale(1.15); /* Aumenta ligeramente el tamaño en un 5% */
+    border-radius: 25px;
+}
+
+.botonBusqueda:hover{
+    background-color: lightgreen;
+}
+
+.carrouselComidas{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenCarrousel {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+    border-radius: 15%;
+    border-bottom: outset;
+}
+
+.botonBusqueda {
+    background-color: #CCFF99;
+    width: 150px;
+    height: 50px;
+    border-bottom: outset;
+    margin-top: 5px;
+    color: #2a5324;
+    width: 70px;
+    font-size: small;
+    border-radius: 10px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.verTodo{
+    margin-bottom: 50px;
+    width: 120px;
+    height: 40px;
+    background-color: #4caf50;
+    color:#e2ffe2;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.verTodo:hover {
+    background-color: #CCFF99;
+    color: #1f401a;
+    cursor: pointer;
+}
+
+.carrouselRestaurants{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    justify-content: center;
+    align-items: center;
+}
+
+.flechaCarrouselIzquierda{
+    transform: rotate(180deg);
+}
+
+.wrapper{
+    width: 85%;
+    margin-top: 25px;
+}
+
+.wrapper .carousel {
+    display : grid;
+    grid-auto-flow : column;
+    grid-auto-columns : calc((100% / 7) - 12px);
+    gap : 5px;
+    overflow-x : auto;
+    scroll-snap-type : x mandatory;
+    scroll-behavior : smooth;
+}
+
+.carousel.dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.no-transition{
+    scroll-behavior: auto;
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+
+}
+
+.card .img img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #b9fab9;
+}
+
+.card h2{
+    font-weight: 500;
+    font-size: 1.16rem;
+    margin: 5px 0 5px;
+}
+
+.carousel .card{
+    scroll-snap-align: start;
+    list-style: none;
+    background-color: #CCFFCC;
+    border-radius: 10px;
+    height: 175px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    cursor: grab;
+    user-select: none;
+}
+
+.card .img {
+    background: greenyellow;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.carousel .dragging .card{
+    cursor: grab;
+    user-select: none;
+}
+
+.opacador{
+    padding-top: 5%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    z-index: -1;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}

@@ -1,0 +1,50 @@
+ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #1f401a;
+    padding: 10px 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav li {
+    flex: 0 0 auto;
+    position: relative;
+}
+
+.nav li a:hover {
+    background-color: #3ec569;
+}
+
+.nav li ul {
+    display: none;
+    position: absolute;
+    min-width: 140px;
+    background-color: #1f401a;
+    z-index: 2;
+    left: 0;
+}
+
+.nav li:hover > ul {
+    display: block;
+}
+
+.nav li a {
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    color:#e2ffe2;
+    text-decoration: none;
+}
+
+.isotipo{
+    width: 50px;
+    height: 50px;
+}
