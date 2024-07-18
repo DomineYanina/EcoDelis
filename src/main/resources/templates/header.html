@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Header</title>
+        <link rel="stylesheet" href="../static/css/header.css">
+    </head>
+    <body>
+        <div th:fragment="header">
+        <header>
+            <div id="header">
+                <ul class="nav" id="nave">
+                    <img class="isotipo" src="IMG/IsotipoUsuario.jpg" alt="Logotipo">
+                    <li><a href="Home.html">Inicio</a></li>
+                    <li><a href="">Mi perfil</a>
+                        <ul>
+                            <li><a href="DetallesUsuario.html">Ver información</a></li>
+                            <li><a href="ModificacionUsuarios.html">Modificar información</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="HistorialPedidos.html">Historial de pedidos</a></li>
+                    <li><a href="QuienesSomosUsuario.html">¿Quienes somos?</a></li>
+                    <li><a href="SoporteEnLinea.html">Soporte en línea</a></li>
+                </ul>
+            </div>
+        </header>
+        </div>
+    </body>
+</html>

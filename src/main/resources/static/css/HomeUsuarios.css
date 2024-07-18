@@ -3,8 +3,12 @@ body {
     margin: 0;
     background-color: lightgreen;
     font-family: sans-serif;
+    overflow: hidden;
     width: 100%;
+    height: auto; /* Ajusta la altura según el contenido */
+    min-height: 100vh; /* Asegura que el body tenga al menos la altura de la ventana */
     background-image: url("../img/a.jpg");
+    background-attachment: fixed; /* Fija la imagen de fondo al viewport */
 }
 
 .bannerHome {
@@ -43,7 +47,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .tituloBanner{
@@ -105,8 +109,6 @@ body {
 
 .botonBusqueda {
     background-color: #CCFF99;
-    width: 150px;
-    height: 50px;
     border-bottom: outset;
     margin-top: 5px;
     color: #2a5324;
@@ -202,7 +204,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    cursor: pointer;
     cursor: grab;
     user-select: none;
 }
@@ -219,14 +220,21 @@ body {
     user-select: none;
 }
 
-.opacador{
-    padding-top: 5%;
+.org {
     display: flex;
     flex-direction: row;
-    background-color: rgba(0, 0, 0, 0.75);
-    height: 100vh;
-    z-index: -1;
+    width: 95%;
     align-content: center;
     align-items: center;
     justify-content: space-around;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    align-items: flex-start;
+    justify-content: center;
 }

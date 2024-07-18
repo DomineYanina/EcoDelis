@@ -8,8 +8,7 @@ ul, ol {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-color: #1f401a;
-    padding: 10px 0;
+    background-color: #2b5424;
     justify-content: space-around;
     align-items: center;
 }
@@ -20,14 +19,15 @@ ul, ol {
 }
 
 .nav li a:hover {
-    background-color: #3ec569;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .nav li ul {
     display: none;
     position: absolute;
     min-width: 140px;
-    background-color: #1f401a;
+    background-color:rgb(204, 255, 153);
     z-index: 2;
     left: 0;
 }
@@ -40,7 +40,7 @@ ul, ol {
     font-size: 16px;
     padding: 10px 15px;
     display: block;
-    color:#e2ffe2;
+    color:#2b5424;
     text-decoration: none;
 }
 

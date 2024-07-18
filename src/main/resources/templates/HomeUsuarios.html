@@ -8,253 +8,281 @@
     <link rel="stylesheet" href="../static/css/header.css">
     <title>Inicio</title>
 </head>
-<body class="bodyH">
-    <!-- Incluye el footer -->
-    <div th:replace="header :: header"></div>
-    <section class="opacador">
-        <article id="banner" class="bannerHome">
-            <div class="tit">
-                <p class="tituloBanner" onclick="mostrarSectorComidas();">¿Que querés comer hoy?</p>
-                <img class="puntero" src="../static/img/Iconos/Click.png" onclick="mostrarSectorComidas();" alt="">
+<body>
+    <main>
+        <header style="position: fixed; top: 0;">
+            <div id="header">
+                <ul class="nav" id="nave">
+                    <img class="isotipo" src="../static/img/IsotipoUsuario.jpg" alt="Logotipo">
+                    <li><a href="Home.html">Inicio</a></li>
+                    <li><a href="">Mi perfil</a>
+                        <ul>
+                            <li><a href="DetallesUsuario.html">Ver información</a></li>
+                            <li><a href="ModificacionUsuarios.html">Modificar información</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="HistorialPedidos.html">Historial de pedidos</a></li>
+                    <li><a href="QuienesSomosUsuario.html">¿Quienes somos?</a></li>
+                    <li><a href="SoporteEnLinea.html">Soporte en línea</a></li>
+                </ul>
             </div>
-            <article id="carrouselComidas" style="visibility: hidden;">
-                <div class="carrouselComidas">
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/carne.jpg" class="imagenCarrousel" alt="Carnes">
-                        <p>Carnes</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaCarnes">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/comida rapida.jpg" class="imagenCarrousel" alt="Comida Rápida">
-                        <p>Comida Rápida</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaComidaRapida">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/pastas.jpg" class="imagenCarrousel" alt="Pastas">
-                        <p>Pastas</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaPastas">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/pollo.jpg" class="imagenCarrousel" alt="Pollo">
-                        <p>Rotisería</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaRotiseria">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/Desayuno2.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Desayuno y merienda</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda1">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/empanadas.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Empanadas</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda2">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/panaderia.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Panadería</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda3">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/pizza.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Pizza</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda4">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/sandwich.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Sandwichería</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda5">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/india.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Comida india</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda6">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/mariscos.png" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Mariscos</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda7">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/oriental.png" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Comida Oriental</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda8">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/mexicana.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Comida mexicana</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda9">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/parrilla.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Parrilla</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda10">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/pescaderia.png" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Pescadería</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda11">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/sin gluten.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Sin glúten</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda12">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/sushi.png" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Sushi</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda13">Buscar</button>
-                        </a>
-                    </div>
-                    <div class="itemCarrouselComidas">
-                        <img src="../static/img/Comidas/vegana.png" class="imagenCarrousel" alt="Desayuno y Merienda">
-                        <p>Vegetariana y vegana</p>
-                        <a href="ResultadoBusqueda.html">
-                            <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda14">Buscar</button>
-                        </a>
-                    </div>
+        </header>
+        <section class="org" id="or">
+            <article id="banner" class="bannerHome">
+                <div class="tit">
+                    <p class="tituloBanner" onclick="mostrarSectorComidas();">¿Que querés comer hoy?</p>
+                    <img class="puntero" src="../static/img/Iconos/Click.png" onclick="mostrarSectorComidas();" alt="">
                 </div>
-                <button class="verTodo">Ver todo</button>
-            </article>
-        </article>
-
-        <div id="Restaurantes" class="contenedorTopRestaurants">
-            <div class="tit">
-                <p class="tituloBanner" onclick="mostrarSectorRestaurantes();">Restaurantes destacados</p>
-                <img class="puntero" src="../static/img/Iconos/Click.png" onclick="mostrarSectorRestaurantes();" alt="">
-            </div>
-            <section id="sectorCarrousel" class="carrouselRestaurants" style="visibility: hidden;">
-                <div>
-                    <img id="izquierda" src="../static/img/Iconos/Flechas/right-arrow_12872001.png" alt="" class="flechaCarrouselIzquierda">
-                </div>
-                <article class="wrapper">
-                    <ul class="carousel">
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 1</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 2</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 3</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 4</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 5</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 6</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 7</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 8</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 9</h2>
-                        </li>
-                        <li class="card">
-                            <div class="img">
-                                <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
-                            </div>
-                            <h2>Ejemplo 10</h2>
-                        </li>
-                    </ul>
+                <article id="carrouselComidas" style="visibility: hidden;">
+                    <div class="carrouselComidas">
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/carne.jpg" class="imagenCarrousel" alt="Carnes">
+                            <p>Carnes</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaCarnes">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/comida rapida.jpg" class="imagenCarrousel" alt="Comida Rápida">
+                            <p>Comida Rápida</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaComidaRapida">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/pastas.jpg" class="imagenCarrousel" alt="Pastas">
+                            <p>Pastas</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaPastas">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/pollo.jpg" class="imagenCarrousel" alt="Pollo">
+                            <p>Rotisería</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaRotiseria">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/Desayuno2.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Desayuno y merienda</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda1">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/empanadas.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Empanadas</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda2">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/panaderia.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Panadería</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda3">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/pizza.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Pizza</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda4">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/sandwich.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Sandwichería</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda5">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/india.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Comida india</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda6">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/mariscos.png" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Mariscos</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda7">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/oriental.png" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Comida Oriental</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda8">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/mexicana.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Comida mexicana</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda9">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/parrilla.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Parrilla</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda10">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/pescaderia.png" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Pescadería</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda11">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/sin gluten.jpg" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Sin glúten</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda12">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/sushi.png" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Sushi</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda13">Buscar</button>
+                            </a>
+                        </div>
+                        <div class="itemCarrouselComidas">
+                            <img src="../static/img/Comidas/vegana.png" class="imagenCarrousel" alt="Desayuno y Merienda">
+                            <p>Vegetariana y vegana</p>
+                            <a href="ResultadoBusqueda.html">
+                                <button class="botonBusqueda" type="button" id="btnBusquedaDesayunoYMerienda14">Buscar</button>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="verTodo">Ver todo</button>
                 </article>
-                <div >
-                    <img id="derecha" src="../static/img/Iconos/Flechas/right-arrow_12872001.png" alt="" class="flechaCarrousel">
+            </article>
+
+            <div id="Restaurantes" class="contenedorTopRestaurants">
+                <div class="tit">
+                    <p class="tituloBanner" onclick="mostrarSectorRestaurantes();">Restaurantes destacados</p>
+                    <img class="puntero" src="../static/img/Iconos/Click.png" onclick="mostrarSectorRestaurantes();" alt="">
                 </div>
-            </section>
-        </div>
+                <section id="sectorCarrousel" class="carrouselRestaurants" style="visibility: hidden;">
+                    <div>
+                        <img id="izquierda" src="../static/img/Iconos/Flechas/right-arrow_12872001.png" alt="" class="flechaCarrouselIzquierda">
+                    </div>
+                    <article class="wrapper">
+                        <ul class="carousel">
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 1</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 2</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 3</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 4</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 5</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 6</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 7</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 8</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 9</h2>
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <img src="../static/img/Comidas/carne.jpg" alt="" draggable="false">
+                                </div>
+                                <h2>Ejemplo 10</h2>
+                            </li>
+                        </ul>
+                    </article>
+                    <div >
+                        <img id="derecha" src="../static/img/Iconos/Flechas/right-arrow_12872001.png" alt="" class="flechaCarrousel">
+                    </div>
+                </section>
+            </div>
+        </section>
 
-    </section>
-    <!--<div class="chatbot-toggler">-->
-    <!--    <button class="abrirChatbot">A</button>-->
-    <!--    <button class="cerrarChatbot">X</button>-->
-    <!--</div>-->
-    <!--<div class="chatbot">-->
-    <!--    <header>-->
-    <!--        <h2>Chatbot</h2>-->
-    <!--        <button class="close-btn">X</button>-->
-    <!--    </header>-->
-    <!--    <ul class="chatbox">-->
-    <!--        <li class="chat incoming">-->
-    <!--            <p>Hola! <br> ¿Como puedo ayudarte?</p>-->
-    <!--        </li>-->
-    <!--        <li class="chat outcoming">-->
+        <footer style="position: fixed; bottom: 0;">
+            <div class="filaFooter">
+                <div class="footerColumn">
+                    <a href="https://www.argentina.gob.ar/economia/comercio/defensadelconsumidor" class="textoFooterSinTitulo" target="_blank">Defensa del consumidor</a>
+                </div>
+                <div class="footerColumn">
+                    <p class="textoFooter">EcoDelis&copy;</p><p class="textoFooter">2023-2024</p>
+                </div>
+            </div>
+        </footer>
+        <!--<div class="chatbot-toggler">-->
+        <!--    <button class="abrirChatbot">A</button>-->
+        <!--    <button class="cerrarChatbot">X</button>-->
+        <!--</div>-->
+        <!--<div class="chatbot">-->
+        <!--    <header>-->
+        <!--        <h2>Chatbot</h2>-->
+        <!--        <button class="close-btn">X</button>-->
+        <!--    </header>-->
+        <!--    <ul class="chatbox">-->
+        <!--        <li class="chat incoming">-->
+        <!--            <p>Hola! <br> ¿Como puedo ayudarte?</p>-->
+        <!--        </li>-->
+        <!--        <li class="chat outcoming">-->
 
-    <!--        </li>-->
-    <!--    </ul>-->
-    <!--    <div class="chat-input">-->
-    <!--        <textarea class="textoAEnviarChat" placeholder="Enter a message..." required></textarea>-->
-    <!--        <button class="enviarMensajeChat">&#10147</button>-->
-    <!--    </div>-->
-    <!--</div>-->
-    <!--<script src="./JavaScript/scriptChatbot.js"></script>-->
-    <!--<script src="./JavaScript/accionesHomeUsuarios.js" defer></script>-->
+        <!--        </li>-->
+        <!--    </ul>-->
+        <!--    <div class="chat-input">-->
+        <!--        <textarea class="textoAEnviarChat" placeholder="Enter a message..." required></textarea>-->
+        <!--        <button class="enviarMensajeChat">&#10147</button>-->
+        <!--    </div>-->
+        <!--</div>-->
+        <!--<script src="./JavaScript/scriptChatbot.js"></script>-->
+        <!--<script src="./JavaScript/accionesHomeUsuarios.js" defer></script>-->
+    </main>
     <script>
+        const contenedor = document.getElementById("or");
         const sectorComidas = document.getElementById("carrouselComidas");
         const sectorRestaurantes = document.getElementById("Restaurantes");
         const sectorCarrousel = document.getElementById("sectorCarrousel");
@@ -270,8 +298,10 @@
 
         function mostrarSectorComidas() {
             if(!sectorComidasVisible){
-                banner.style.width='85%';
-                sectorRestaurantes.style.width='10%';
+                contenedor.style.marginTop='5%';
+                contenedor.style.marginBottom='2.5%';
+                banner.style.width='70%';
+                sectorRestaurantes.style.width='25%';
                 sectorRestaurantes.style.height='125px';
                 banner.style.height='fit-content';
                 sectorCarrousel.style.visibility='hidden';
@@ -279,6 +309,8 @@
                 sectorComidas.style.visibility='visible';
                 sectorRestaurantesVisible=false;
             } else {
+                contenedor.style.marginTop='0';
+                contenedor.style.marginBottom='0';
                 sectorComidasVisible=false;
                 banner.style.width='48%';
                 sectorRestaurantes.style.width='48%';
@@ -289,15 +321,19 @@
 
         function mostrarSectorRestaurantes() {
             if(!sectorRestaurantesVisible){
+                contenedor.style.marginTop='5%';
+                contenedor.style.marginBottom='2.5%';
                 sectorRestaurantes.style.height='fit-content';
-                sectorRestaurantes.style.width='85%';
-                banner.style.width='10%';
+                sectorRestaurantes.style.width='70%';
+                banner.style.width='25%';
                 sectorRestaurantesVisible=true;
                 sectorCarrousel.style.visibility='visible';
                 sectorComidasVisible=false;
                 banner.style.height='125px';
                 sectorComidas.style.visibility='hidden';
             } else {
+                contenedor.style.marginTop='0';
+                contenedor.style.marginBottom='0';
                 sectorRestaurantesVisible=false;
                 banner.style.width='48%';
                 sectorRestaurantes.style.width='48%';
@@ -323,8 +359,6 @@
                 nav.style.width = "100%";
                 nav.style.background = "#CCFF99";
                 nav.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
-
-
                 lastScrollTop = scrollPosition;
             } else {
                 nav.style.position = "static";
