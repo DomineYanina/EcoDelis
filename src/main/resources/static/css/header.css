@@ -8,9 +8,14 @@ ul, ol {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-color: #2b5424;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    background: #2b5424;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+    top: 0px;
+    z-index: 2;
+    width: 100%;
 }
 
 .nav li {
@@ -27,7 +32,7 @@ ul, ol {
     display: none;
     position: absolute;
     min-width: 140px;
-    background-color:rgb(204, 255, 153);
+    background-color:#2b5424;
     z-index: 2;
     left: 0;
 }
@@ -40,7 +45,7 @@ ul, ol {
     font-size: 16px;
     padding: 10px 15px;
     display: block;
-    color:#2b5424;
+    color: rgb(204, 255, 153);
     text-decoration: none;
 }
 

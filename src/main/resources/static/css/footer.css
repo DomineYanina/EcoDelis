@@ -1,17 +1,24 @@
 footer {
-    background-color: #1f401a;
-    color: #e2ffe2;
+    background-color: #2b5424;
+    color: rgb(204, 255, 153);
     width: 100%;
     padding: 1% 1% 1% 1%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 -2px 4px;
     align-items: center;
     z-index: 1000; /* Asegurar que el footer esté por encima de todo */
 }
+.filaFooter{
+    background-color: #2b5424;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
 
 .footerAbajo{
+    background-color: #2b5424;
     display: flex;
     flex-direction: row;
-    background-color: #1f401a;
-    color: #e2ffe2;
+    color: rgb(204, 255, 153);
     justify-content: space-around;
     height: fit-content;
     width: 100%;
@@ -29,14 +36,14 @@ footer {
 }
 
 .textoFooter{
-    color: #e2ffe2;
+    color: rgb(204, 255, 153);
     margin-top: 5px;
     text-decoration: none;
     font-size: 15px;
 }
 
 .textoFooterSinTitulo{
-    color: #e2ffe2;
+    color: rgb(204, 255, 153);
     margin-bottom: 15px;
     text-decoration: none;
     font-size: 15px;
@@ -45,7 +52,7 @@ footer {
 .tituloFooter{
     margin-bottom: 15px;
     font-size: 18px;
-    color:#e2ffe2
+    color:rgb(204, 255, 153);
 }
 
 .contFooter{
