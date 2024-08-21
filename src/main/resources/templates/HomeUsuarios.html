@@ -163,7 +163,7 @@
                             </a>
                         </div>
                     </div>
-                    <button class="verTodo">Ver todo</button>
+                    <button id="verTodoComidas" class="verTodo">Ver todo</button>
                 </article>
             </article>
 
@@ -233,6 +233,7 @@
                         <h2>Ejemplo 10</h2>
                     </div>
                 </section>
+                <button id="verTodoRestaurants" class="verTodo">Ver todo</button>
             </div>
 
         </section>
@@ -294,7 +295,7 @@
                 footer.style.position='relative';
                 contenedor.style.marginTop='5%';
                 contenedor.style.marginBottom='2.5%';
-                banner.style.marginTop='35%';
+                banner.style.marginTop='25%';
                 banner.style.width='70%';
                 sectorRestaurantes.style.width='25%';
                 sectorRestaurantes.style.height='125px';
@@ -347,30 +348,6 @@
             }
         }
 
-        let header = document.getElementById("header");
-        let scrollPosition = window.scrollY;
-
-        let lastScrollTop = 0; // Declarar la variable fuera del evento de scroll
-
-        window.addEventListener("scroll", function() {
-            let scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-            let nav = document.getElementById("nave"); // Reemplaza "tuIdDelNav" con el ID real de tu elemento nav
-
-            if (scrollPosition >= header.clientHeight) {
-                nav.style.position = "fixed";
-                nav.style.top = "0";
-                nav.style.zIndex = "2";
-                nav.style.width = "100%";
-                nav.style.background = "#CCFF99";
-                nav.style.boxShadow = "0 2px 4px rgba(0, 0, 0, 0.1)";
-                lastScrollTop = scrollPosition;
-            } else {
-                nav.style.position = "static";
-                nav.style.background = "transparent";
-                nav.style.boxShadow = "none";
-            }
-        });
     </script>
 </body>
 </html>

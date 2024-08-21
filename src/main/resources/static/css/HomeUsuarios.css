@@ -11,6 +11,12 @@ body {
     background-attachment: fixed; /* Fija la imagen de fondo al viewport */
 }
 
+#carrouselComidas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .bannerHome {
     height: 125px;
     border-radius: 25px;
@@ -68,6 +74,7 @@ body {
 }
 
 .itemCarrouselComidas {
+    display: flex;
     align-items: center;
     border-width: 2px;
     background-color: white;
@@ -78,6 +85,19 @@ body {
     transition: transform 0.3s ease;
     border-radius: 15px;
     box-shadow: 0 0 100px rgba(189, 178, 120, 100);
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+}
+
+.carrouselComidasCont{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .itemCarrouselComidas:hover {
